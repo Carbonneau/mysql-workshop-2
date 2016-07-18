@@ -1,0 +1,21 @@
+Exercise 1
+
+Import Database Schema from the following source file into decodemtl_addressbook:
+data/import-table-structure.sql
+
+mysql -u carbonneau;
+source data/import-table-structure.sql;
+
+
+show tables
+    -> ;
++----------------------------------------+
+| Tables_in_decodemtl_addressbook_import |
++----------------------------------------+
+| Account                                |
+| AddressBook                            |
+| Entry                                  |
++----------------------------------------+
+3 rows in set (0.01 sec)
+
+
