@@ -1,0 +1,75 @@
+Exercise 2
+
+Insert one row into decodemtl_addressbook.Account
+
+show columns from Account;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email      | varchar(255) | NO   |     | NULL    |                |
+| password   | varchar(40)  | NO   |     | NULL    |                |
+| createdOn  | datetime     | NO   |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+
+INSERT INTO Account (email, password, createdOn) VALUES
+    ("mr.rodgers@sesamestreet.com", "I_love_$weaters", '20160601');
+    
+
+
+select * from Account;
++----+-----------------------------+-----------------+---------------------+------------+
+| id | email                       | password        | createdOn           | modifiedOn |
++----+-----------------------------+-----------------+---------------------+------------+
+|  1 | mr.rodgers@sesamestreet.com | I_love_$weaters | 2016-06-01 00:00:00 | NULL       |
++----+-----------------------------+-----------------+---------------------+------------+
+1 row in set (0.01 sec)
+
+
+
+
+
+
+Insert one row into decodemtl_addressbook.AddressBookgit 
+
+INSERT INTO AddressBook (accountId, name, createdOn) VALUES
+    (10120012, 'Mr.Rodgers', '20120909');
+
+
+select * from AddressBook;
++----+-----------+------------+---------------------+------------+
+| id | accountId | name       | createdOn           | modifiedOn |
++----+-----------+------------+---------------------+------------+
+|  1 |  10120012 | Mr.Rodgers | 2012-09-09 00:00:00 | NULL       |
++----+-----------+------------+---------------------+------------+
+1 row in set (0.00 sec)
+
+
+
+
+
+
+Insert three rows into decodemtl_addressbook.Entry
+
+
+INSERT INTO `Entry` (`addressBookId`,`firstName`,`lastName`,`birthday`,`type`,`subtype`,`contentLineOne`) VALUES 
+    (104,"Rodger","Mr","1972-01-26 13:58:42","home","phone","19101212"),
+    (107,"Cookie","Monster","1962-01-26 13:58:42","home","phone","19761212"),
+    (108,"big", "bird", '19990101', 'home', 'phone', 'this is line 1' );
+
+
+
+select * from Entry;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |           104 | Rodger    | Mr       | 1972-01-26 13:58:42 | home | phone   | 19101212       | NULL           | NULL             | NULL            | NULL            |
+|  2 |           107 | Cookie    | Monster  | 1962-01-26 13:58:42 | home | phone   | 19761212       | NULL           | NULL             | NULL            | NULL            |
+|  3 |           108 | big       | bird     | 1999-01-01 00:00:00 | home | phone   | this is line 1 | NULL           | NULL             | NULL            | NULL            |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+3 rows in set (0.00 sec)
+
+
