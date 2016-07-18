@@ -1,0 +1,38 @@
+Exercise 3
+
+Retrieve data from the previously inserted 
+decodemtl_addressbook.Account row
+
+select * from Account;
++----+-----------------------------+-----------------+---------------------+------------+
+| id | email                       | password        | createdOn           | modifiedOn |
++----+-----------------------------+-----------------+---------------------+------------+
+|  1 | mr.rodgers@sesamestreet.com | I_love_$weaters | 2016-06-01 00:00:00 | NULL       |
++----+-----------------------------+-----------------+---------------------+------------+
+1 row in set (0.01 sec)
+
+Retrieve data from the previously 
+inserted decodemtl_addressbook.AddressBook row
+
+
+select * from AddressBook;
++----+-----------+------------+---------------------+------------+
+| id | accountId | name       | createdOn           | modifiedOn |
++----+-----------+------------+---------------------+------------+
+|  1 |  10120012 | Mr.Rodgers | 2012-09-09 00:00:00 | NULL       |
++----+-----------+------------+---------------------+------------+
+1 row in set (0.00 sec)
+
+
+Retrieve data from the previously 
+inserted decodemtl_addressbook.Entry rows
+
+select * from Entry;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |           104 | Rodger    | Mr       | 1972-01-26 13:58:42 | home | phone   | 19101212       | NULL           | NULL             | NULL            | NULL            |
+|  2 |           107 | Cookie    | Monster  | 1962-01-26 13:58:42 | home | phone   | 19761212       | NULL           | NULL             | NULL            | NULL            |
+|  3 |           108 | big       | bird     | 1999-01-01 00:00:00 | home | phone   | this is line 1 | NULL           | NULL             | NULL            | NULL            |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+3 rows in set (0.00 sec)
