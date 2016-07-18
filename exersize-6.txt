@@ -1,0 +1,9 @@
+Exercise 6
+
+Delete decodemtl_addressbook.Account and all associated data.
+
+DELETE * FROM Account;
+
+ select * from Account;
+Empty set (0.00 sec)
+
