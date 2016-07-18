@@ -1,0 +1,10 @@
+Exercise 5
+
+Delete all data from decodemtl_addressbook.Entry without 
+using a DELETE statement
+
+TRUNCATE TABLE Entry;
+
+select * from Entry;
+Empty set (0.00 sec)
+
