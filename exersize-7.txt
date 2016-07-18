@@ -1,0 +1,16 @@
+Exercise 7
+
+Import Database Schema from the following source file into 
+decodemtl_addressbook_import:
+
+source data/import-table-structure.sql
+
+
+
+Bulk import data from the following source files into decodemtl_addressbook_import:
+
+ 
+source data/import-account.sql
+source data/import-addressbook.sql
+source data/import-entry.sql
+
