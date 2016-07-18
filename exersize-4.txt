@@ -1,0 +1,52 @@
+Exercise 4
+
+Modify the decodemtl_addressbook.Account row
+
+UPDATE Account
+SET email='MISTERRODGERS@gmail.com', password = 'P@$$w0rD'
+WHERE id = '1';
+
+mysql> select * from Account;
++----+-------------------------+----------+---------------------+------------+
+| id | email                   | password | createdOn           | modifiedOn |
++----+-------------------------+----------+---------------------+------------+
+|  1 | MISTERRODGERS@gmail.com | P@$$w0rD | 2016-06-01 00:00:00 | NULL       |
++----+-------------------------+----------+---------------------+------------+
+1 row in set (0.00 sec)
+
+
+
+
+Modify the decodemtl_addressbook.AddressBook row
+
+UPDATE AddressBook
+SET name ='MISTA ROGS'
+WHERE id = 1 ;
+
+mysql> select * from AddressBook;
++----+-----------+------------+---------------------+------------+
+| id | accountId | name       | createdOn           | modifiedOn |
++----+-----------+------------+---------------------+------------+
+|  1 |  10120012 | MISTA ROGS | 2012-09-09 00:00:00 | NULL       |
++----+-----------+------------+---------------------+------------+
+1 row in set (0.00 sec)
+
+
+Modify the three decodemtl_addressbook.Entry rows using one query only
+
+UPDATE Entry
+SET subtype ='address'
+WHERE subtype = 'phone'; 
+
+
+mysql> select * from Entry;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |           104 | Rodger    | Mr       | 1972-01-26 13:58:42 | home | address | 19101212       | NULL           | NULL             | NULL            | NULL            |
+|  2 |           107 | Cookie    | Monster  | 1962-01-26 13:58:42 | home | address | 19761212       | NULL           | NULL             | NULL            | NULL            |
+|  3 |           108 | big       | bird     | 1999-01-01 00:00:00 | home | address | this is line 1 | NULL           | NULL             | NULL            | NULL            |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+3 rows in set (0.00 sec)
+
+
