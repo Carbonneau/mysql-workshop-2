@@ -1,0 +1,28 @@
+Exercise 11
+
+How many Address Book Entries are not listed as other?
+
+select * from Entry where type <> 'other';
+2800 rows in set (0.01 sec)
+
+How many Address Book Entries are listed as either home or work?
+
+select count(*) from Entry where type <> 'other';                                         
++----------+
+| count(*) |
++----------+
+|     2800 |
++----------+
+1 row in set (0.00 sec)
+
+How many Address Book Entries are listed as phones?
+
+select count(*) from Entry where subtype = 'phone';
++----------+
+| count(*) |
++----------+
+|      600 |
++----------+
+1 row in set (0.00 sec)
+
+
